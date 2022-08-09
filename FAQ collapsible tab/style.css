@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #cacaca;
+}
+
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header{
+  text-align: center;
+}
+
+.box{
+  position: relative;
+  border: 1px solid grey;
+  padding: 30px 10px;
+  margin: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.box.active{
+  background: white;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.answer{
+  display: none;
+  padding-top: 20px;
+}
+
+.box.active .answer{
+  display: block;
+}
+
+.btn-toggle{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-toggle .fa-times{
+  display: none;
+}
+
+.box.active .btn-toggle .fa-times{
+  display: block;
+  color: white;
+}
+
+.box.active .btn-toggle .fa-chevron-down{
+  display: none;
+}
+
+.box.active .btn-toggle{
+  background: grey;
+}
